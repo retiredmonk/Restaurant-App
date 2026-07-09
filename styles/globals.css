@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --paper:#F6F3EE;
+    --paper-dark:#F1E8DA;
+
+    --wood:#7A5B3E;
+
+    --charcoal:#2B2420;
+
+    --stone:#5A4F42;
+    --ink:#3D2F23;
+
+    --gold:#8B6438;
+    --gold-glow:#C0842E;
+
+    --border-hairline:#DDD0BA;
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+    *{
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+[hidden]{
+    display: none !important;
+}
+
+

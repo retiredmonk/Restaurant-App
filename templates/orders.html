@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders | Matsumoto</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+    <link rel="stylesheet" href="../styles/globals.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/orders.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,340;9..144,350;9..144,600&family=Inter:wght@400;500;550;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <header>
+
+            <nav class="navbar">
+
+                <a href="home.html" class="brand">
+
+                    <img src="../assets/images/logo.png" alt="Matsumoto Logo" class="logo">
+
+                    <div>
+
+                        <p class="brand-name">MATSUMOTO</p>
+                        <p>Third Generation</p>
+
+                    </div>
+
+                </a>
+
+                <div class="nav-links">
+
+                    <a href="menu.html">MENU</a>
+                    <a href="reservations.html">RESERVATIONS</a>
+                    <a href="our-story.html">OUR STORY</a>
+                    <a href="#contact">CONTACT</a>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+    </section>
+
+    <main class="contents">
+
+        <div class="page-info">
+
+            <h1>Your Cart</h1>
+
+        </div>
+
+        <section class="cart">
+
+            <div id="cart-items">
+            <!-- Cart Items later with js -->
+            </div>
+
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <span id="subtotal">¥. 0</span>
+            </div>
+
+        </section>
+
+        <form class="place-order">
+
+            <section class="customer-info">
+
+                <h2>Contact Details</h2>
+
+                 <div class="info-group">
+
+                     <label for="name">Name</label>
+                     <input type="text" name="name" id="name" placeholder="Enter your name">
+
+                 </div>
+
+                <div class="info-group">
+
+                    <label for="phone">Phone</label>
+                    <div class="phone-input">
+                        <span>+81</span>
+                        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+                    </div>
+                </div>
+
+                <div class="info-group">
+
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address" placeholder="Enter your address">
+
+                </div>
+
+            </section>
+
+            <section class="payment">
+
+                <h2>Payment</h2>
+
+                <div class="form-group">
+
+                    <label for="cardholder-name">Cardholder Name</label>
+                    <input id="cardholder-name" type="text" placeholder="John Smith">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for ="card-number">Card Number</label>
+                    <input id="card-number" type="text" placeholder="•••• •••• •••• 4589">
+
+                </div>
+
+                <div class="payment-row">
+
+                    <div class="form-group">
+
+                        <label for="expiry-date">Expiry Date</label>
+                        <input id="expiry-date" type="text" placeholder="08 / 28">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" type="password" placeholder="•••">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+
+                    <span>Subtotal</span>
+                    <span id="order-subtotal">¥8,450</span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Delivery</span>
+                    <span id="order-delivery">Free</span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Service Fee</span>
+                    <span id="order-service-fee">¥250</span>
+
+                </div>
+
+                <hr>
+
+                <div class="summary-row total">
+
+                    <span>Total</span>
+                    <span id="order-total">¥8,700</span>
+
+                </div>
+
+                <div class="summary-extra">
+
+                    <p>Estimated Pickup</p>
+                    <span id="pickup-time">7:35 PM</span>
+
+                </div>
+
+            </section>
+
+            <button type = "submit" class="primary-button" id="confirm-order-btn">
+                PLACE ORDER
+            </button>
+        </form>
+
+    </main>
+
+    <footer id="contact">
+
+        <div class="footer">
+
+            <div class="footer-brand">
+
+                <h2>MATSUMOTO</h2>
+
+                <p>
+
+                    Third Generation
+
+                </p>
+
+                <p>
+
+                    A Shibuya-inspired fine dining experience
+                    where tradition, craftsmanship,
+                    and hospitality come together
+                    in every course.
+
+                </p>
+
+            </div>
+
+            <div class="footer-navigation">
+
+                <h3>Navigation</h3>
+
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="reservations.html">Reservations</a>
+                <a href="our-story.html">Our Story</a>
+
+            </div>
+
+            <div class="footer-visit">
+
+                <h3>Visit Us</h3>
+
+                <p>Shibuya, Japan</p>
+
+                <p>
+
+                    Dinner Service
+
+                    <br>
+
+                    Tuesday – Saturday
+
+                    <br>
+
+                    5:00 PM – 12:00 AM
+
+                </p>
+
+                <p>
+
+                    Last Reservation
+
+                    <br>
+
+                    10:30 PM
+
+                </p>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>+81 75-123-4567</p>
+
+                <a href="mailto:reservations@matsumoto.jp">
+
+                    reservations@matsumoto.jp
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

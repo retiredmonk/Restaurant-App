@@ -1,0 +1,282 @@
+body{
+    font-family:"Cormorant Garamond",serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible{
+
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+
+}
+
+header{
+    padding:3.5rem 4rem 2rem;
+    background:var(--paper);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    text-decoration:none;
+    color:var(--charcoal);
+}
+
+.logo{
+    width:50px;
+    object-fit:contain;
+}
+
+.brand-name{
+    font-family:"Fraunces",serif;
+    font-size:1.75rem;
+    font-weight:350;
+    letter-spacing:.08rem;
+}
+
+.brand p:not(.brand-name){
+    font-family:"Inter",sans-serif;
+    font-size:.7rem;
+    letter-spacing:.1rem;
+    text-align:center;
+    text-transform:uppercase;
+    color:var(--stone);
+}
+
+.nav-links{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:1.6rem;
+}
+
+.nav-links a{
+    font-family:"Inter",sans-serif;
+    font-size:.8rem;
+    font-weight:500;
+    letter-spacing:.15rem;
+    text-transform:uppercase;
+    color:var(--charcoal);
+    transition:opacity .3s ease;
+}
+
+.nav-links a:hover{
+    opacity:.6;
+}
+
+.nav-links a.active{
+    border-bottom:1px solid var(--charcoal);
+    padding-bottom:2px;
+}
+
+.hero-content{
+    padding: 3rem 4rem 4rem 7rem;
+    box-sizing: border-box;
+}
+
+.hero-content::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:1px;
+    background:var(--gold, #C0842E);
+    margin-top:2rem;
+}
+
+
+
+.hero-content h1{
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 340;
+    font-size: 4.5rem;
+    line-height: 1.05;
+    color: var(--charcoal, #2B2420);
+    margin-bottom: 1.25rem;
+}
+
+.hero-content p{
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    max-width: 480px;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--ink, #3D2F23);
+}
+
+.primary-button{
+    width: 100%;
+    border: none;
+    background: var(--charcoal);
+    color: var(--paper);
+    padding: 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .16rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .3s ease, box-shadow .3s ease;
+}
+
+
+footer{
+    background:var(--paper);
+    margin-top:4rem;
+    padding:5rem 5rem 2rem;
+}
+
+.footer{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:4rem;
+}
+
+.footer-brand h2{
+    font-family:"Fraunces",serif;
+    font-size:2.5rem;
+    font-weight:300;
+    margin-bottom:.6rem;
+}
+
+.footer-brand p:first-of-type{
+    font-family:"Inter",sans-serif;
+    text-transform:uppercase;
+    color:var(--gold);
+    letter-spacing:.15rem;
+    font-size:.75rem;
+    margin-bottom:1.2rem;
+}
+
+.footer-brand p:last-of-type{
+    color:var(--ink);
+    line-height:1.9;
+}
+
+.footer-navigation,
+.footer-visit,
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+    gap:.9rem;
+}
+
+.footer h3{
+    font-family:"Inter",sans-serif;
+    color:var(--gold);
+    font-size:.75rem;
+    letter-spacing:.18rem;
+    text-transform:uppercase;
+    margin-bottom:.7rem;
+}
+
+.footer a{
+    text-decoration:none;
+    color:var(--ink);
+    transition:.3s ease;
+}
+
+.footer a:hover{
+    opacity:.6;
+    color:var(--gold);
+}
+
+.footer p{
+    color:var(--ink);
+    line-height:1.8;
+}
+
+
+::selection{
+
+    background:var(--charcoal);
+
+    color:var(--paper);
+
+}
+
+@media (max-width: 960px){
+
+    .footer{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:3rem;
+
+    }
+
+    header,
+    .hero-content,
+    footer{
+
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+
+    }
+
+
+}
+
+@media (max-width: 768px){
+
+
+    header{
+
+        padding:2rem 1.5rem;
+
+    }
+
+    .hero-content{
+
+        padding:2rem 1.5rem 3rem;
+
+    }
+
+    .hero-content h1{
+
+        font-size:3.3rem;
+
+    }
+
+    .hero-content p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+        footer{
+
+        padding:4rem 1.5rem 2rem;
+
+    }
+
+    .footer{
+
+        grid-template-columns:1fr;
+
+        gap:2.5rem;
+
+    }
+
+}
+

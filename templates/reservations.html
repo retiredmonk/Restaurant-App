@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | Matsumoto</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+    <link rel="stylesheet" href="../styles/globals.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/reservations.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,340;9..144,350;9..144,600&family=Inter:wght@400;500;550;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="hero">
+
+        <header>
+
+            <nav class="navbar">
+
+                <a href="home.html" class="brand">
+                    <img src="../assets/images/logo.png" alt="Matsumoto Logo" class="logo">
+
+                    <div>
+
+                        <p class="brand-name">MATSUMOTO</p>
+                        <p>Third Generation</p>
+
+                    </div>
+                </a>
+
+                <div class="nav-links">
+
+                    <a href="menu.html">MENU</a>
+                    <a class="active" href="reservations.html">RESERVATIONS</a>
+                    <a href="our-story.html">OUR STORY</a>
+                    <a href="#contact">CONTACT</a>
+
+                </div>
+
+
+            </nav>
+
+        </header>
+
+        <div class="hero-content">
+
+            <h1>Reservations</h1>
+            <p>Matsumoto is open Tuesday - Saturday evenings at 5:00pm. Reservations are released monthly. Please check availability for your preferred date.</p>
+
+        </div>
+
+    </section>
+
+    <main class="contents">
+
+        <section class="reservation-section">
+
+            <form class="reservation-form">
+
+                <h2>Reserve Your Table</h2>
+                <p>Every reservation is prepared with the same care as every dish we serve.</p>
+
+                <div class="name" aria-required="true">
+
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+                </div>
+
+                <div class="email">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required autocomplete="email">
+
+                </div>
+
+                <div class="guests">
+
+                    <label for="guests">Guests</label>
+
+                    <select id="guests" name="guests" required>
+
+                        <option value="" selected disabled>Select Guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="7">7 Guests</option>
+                        <option value="8">8 Guests</option>
+                        <option value="9+">9+ Guests (Contact Us)</option>
+
+                    </select>
+
+                </div>
+
+                <div class="occasion">
+
+                    <label for="occasion">Occasion</label>
+
+                    <select id="occasion" name="occasion" required>
+
+                        <option value="" selected disabled>Select Occasion</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="date-night">Date Night</option>
+                        <option value="celebration">Celebration</option>
+                        <option value="business-meeting">Business Meeting</option>
+                        <option value="other">Other</option>
+
+                    </select>
+
+                    <div id="other-occasion" hidden>
+
+                        <label for="other">
+
+                            Please Specify
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="other"
+                            placeholder="Tell us about the occasion"
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="date">
+
+                    <label for="date">Date</label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                    >
+                </div>
+
+                <div class="time">
+
+                    <label for="time">Time</label>
+
+                        <select id="time" name="time" required>
+
+                            <option value="" selected disabled>
+                                Select Time
+
+                            </option>
+
+                            <option>5:00 PM</option>
+                            <option>5:30 PM</option>
+                            <option>6:00 PM</option>
+                            <option>6:30 PM</option>
+                            <option>7:00 PM</option>
+                            <option>7:30 PM</option>
+                            <option>8:00 PM</option>
+                            <option>8:30 PM</option>
+                            <option>9:00 PM</option>
+                            <option>9:30 PM</option>
+                            <option>10:00 PM</option>
+                            <option>10:30 PM</option>
+
+                        </select>
+
+                </div>
+
+                <button type="submit" class="primary-button" id="reserve-button">
+                    CHECK AVAILABILITY
+                </button>
+
+            </form>
+
+            <figure class="reservation-image">
+
+                <img src="../assets/images/reservation-images/reservation.jpg"
+                     alt="Private dining at Matsumoto">
+
+                <figcaption>
+
+                    <span>Shibuya, Japan</span>
+
+                    <h3>Private Dining</h3>
+
+                    <p>
+                        Every evening is prepared with patience,
+                        precision, and hospitality.
+                    </p>
+
+                </figcaption>
+
+            </figure>
+
+
+        </section>
+
+        <section class="reservation-policies">
+
+            <div class="policies">
+
+                <h2>SPECIFIC DIETARY REQUESTS</h2>
+                <p>
+                    We are pleased to offer modifications for vegetarian, vegan, dairy-free, and gluten-free diets. Please note, however, that alliums, salt, sugar, and vinegar are integral to our menu and cannot be removed. Requests to avoid these ingredients may result in the omission of certain courses.
+                </p>
+
+                <h2>ATTIRE</h2>
+                <p>
+                    At Matsumoto, you can’t be overdressed, so go big, look good and have fun with it! We’re a bit old school so we prefer you don’t show up to dinner in a t-shirt or shorts. We put a lot of intention and care into our dining experience, and it’s so fun when guests meet us with the same energy. Let's dine together.
+                </p>
+
+                <h2>CANCELLATIONS</h2>
+                <p>
+                    If you need to cancel a reservation for any reason you may do so forty-eight hours in advance, and we will issue a full refund of your deposit. The reservation becomes non-refundable two days prior to your booking. Reservations changing to a smaller party size do not receive a refunded deposit. To recoup the deposit for a reservation decreasing in size you may cancel the reservation outside the 48-hour window and rebook a smaller table if one is available. We cannot make exceptions for COVID-19 diagnoses.
+                </p>
+
+                <h2>OTHER QUESTIONS</h2>
+                <p>
+                    please email
+                    <a href="mailto:reservations@matsumoto.jp">
+                        reservations@matsumoto.jp
+                    </a>
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer id="contact">
+
+        <div class="footer">
+
+            <div class="footer-brand">
+
+                <h2>MATSUMOTO</h2>
+
+                <p>
+
+                    Third Generation
+
+                </p>
+
+                <p>
+
+                    A Shibuya-inspired fine dining experience
+                    where tradition, craftsmanship,
+                    and hospitality come together
+                    in every course.
+
+                </p>
+
+            </div>
+
+            <div class="footer-navigation">
+
+                <h3>Navigation</h3>
+
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="reservations.html">Reservations</a>
+                <a href="our-story.html">Our Story</a>
+
+            </div>
+
+            <div class="footer-visit">
+
+                <h3>Visit Us</h3>
+
+                <p>Shibuya, Japan</p>
+
+                <p>
+
+                    Dinner Service
+
+                    <br>
+
+                    Tuesday – Saturday
+
+                    <br>
+
+                    5:00 PM – 12:00 AM
+
+                </p>
+
+                <p>
+
+                    Last Reservation
+
+                    <br>
+
+                    10:30 PM
+
+                </p>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>+81 75-123-4567</p>
+
+                <a href="mailto:reservations@matsumoto.jp">
+
+                    reservations@matsumoto.jp
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>

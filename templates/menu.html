@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Matsumoto</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,340;9..144,350;9..144,600&family=Inter:wght@400;500;550;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../styles/globals.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <a href="home.html" class="brand">
+                <img src="../assets/images/logo.png" alt="Matsumoto Logo" class="logo">
+                <div>
+                    <p class="brand-name">MATSUMOTO</p>
+                    <p>Third Generation</p>
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="menu.html">MENU</a>
+                <a href="reservations.html">RESERVATIONS</a>
+                <a href="our-story.html">OUR STORY</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Menu</h1>
+            <p>
+                Rooted in tradition. Warmed by Shibuya hospitality.
+                <br>
+                Seasonal, handcrafted dishes served the way Matsumoto has served them for three generations.
+            </p>
+        </div>
+    </section>
+
+    <!--suppress HtmlWrongAttributeValue -->
+    <section class="menu-nav" role="tablist" aria-label="Menu categories">
+
+        <button type="button" role="tab" id="tab-appetizers" aria-controls="appetizers" aria-selected="true" tabindex="0" class="active">Appetizers</button>
+        <button type="button" role="tab" id="tab-soups-salads" aria-controls="soups-salads" aria-selected="false" tabindex="-1">Soups & Salads</button>
+        <button type="button" role="tab" id="tab-sushi-sashimi" aria-controls="sushi-sashimi" aria-selected="false" tabindex="-1">Sushi & Sashimi</button>
+        <button type="button" role="tab" id="tab-noodles" aria-controls="noodles" aria-selected="false" tabindex="-1">Noodles</button>
+        <button type="button" role="tab" id="tab-rice-bowls" aria-controls="rice-bowls" aria-selected="false" tabindex="-1">Rice Bowls</button>
+
+    </section>
+
+    <main class="menu-layout">
+
+        <section class="menu-categories">
+
+            <div id="appetizers" class="active" role="tabpanel" aria-labelledby="tab-appetizers">
+                <div class="placeholder">
+                    <!-- I use js for food cards -->
+                </div>
+            </div>
+
+            <div id="soups-salads" role="tabpanel" aria-labelledby="tab-soups-salads" hidden>
+                <div class="placeholder">
+                    <!-- I use js for food cards -->
+                </div>
+            </div>
+
+            <div id="sushi-sashimi" role="tabpanel" aria-labelledby="tab-sushi-sashimi" hidden>
+                <div class="placeholder">
+                    <!-- I use js for food cards -->
+                </div>
+            </div>
+
+            <div id="noodles" role="tabpanel" aria-labelledby="tab-noodles" hidden>
+                <div class="placeholder">
+                    <!-- I use js for food cards -->
+                </div>
+            </div>
+
+            <div id="rice-bowls" role="tabpanel" aria-labelledby="tab-rice-bowls" hidden>
+                <div class="placeholder">
+                    <!-- I use js for food cards -->
+                </div>
+            </div>
+
+        </section>
+
+        <aside id="cart" class="cart" aria-label="Your order">
+            <h2>Your Cart</h2>
+
+            <div id="cart-items" aria-live="polite">
+                <!-- Cart Items later with js -->
+            </div>
+
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <span id="subtotal" aria-live="polite">¥. 0</span>
+            </div>
+
+            <a href="orders.html">
+                Continue to Order
+            </a>
+        </aside>
+
+    </main>
+
+    <footer id="contact">
+
+        <div class="footer">
+
+            <div class="footer-brand">
+
+                <h2>MATSUMOTO</h2>
+
+                <p>
+
+                    Third Generation
+
+                </p>
+
+                <p>
+
+                    A Shibuya-inspired fine dining experience
+                    where tradition, craftsmanship,
+                    and hospitality come together
+                    in every course.
+
+                </p>
+
+            </div>
+
+            <div class="footer-navigation">
+
+                <h3>Navigation</h3>
+
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="reservations.html">Reservations</a>
+                <a href="our-story.html">Our Story</a>
+
+            </div>
+
+            <div class="footer-visit">
+
+                <h3>Visit Us</h3>
+
+                <p>Shibuya, Japan</p>
+
+                <p>
+
+                    Dinner Service
+
+                    <br>
+
+                    Tuesday – Saturday
+
+                    <br>
+
+                    5:00 PM – 12:00 AM
+
+                </p>
+
+                <p>
+
+                    Last Reservation
+
+                    <br>
+
+                    10:30 PM
+
+                </p>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>+81 75-123-4567</p>
+
+                <a href="mailto:reservations@matsumoto.jp">
+
+                    reservations@matsumoto.jp
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
