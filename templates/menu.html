@@ -54,7 +54,8 @@
     <!--suppress HtmlWrongAttributeValue -->
     <section class="menu-nav" role="tablist" aria-label="Menu categories">
 
-        <button type="button" role="tab" id="tab-appetizers" aria-controls="appetizers" aria-selected="true" tabindex="0" class="active">Appetizers</button>
+        <button type="button" role="tab" id="tab-all" aria-controls="menu-panels" aria-selected="true" tabindex="0" class="active">All</button>
+        <button type="button" role="tab" id="tab-appetizers" aria-controls="appetizers" aria-selected="false" tabindex="-1">Appetizers</button>
         <button type="button" role="tab" id="tab-soups-salads" aria-controls="soups-salads" aria-selected="false" tabindex="-1">Soups & Salads</button>
         <button type="button" role="tab" id="tab-sushi-sashimi" aria-controls="sushi-sashimi" aria-selected="false" tabindex="-1">Sushi & Sashimi</button>
         <button type="button" role="tab" id="tab-noodles" aria-controls="noodles" aria-selected="false" tabindex="-1">Noodles</button>
@@ -64,7 +65,7 @@
 
     <main class="menu-layout">
 
-        <section class="menu-categories">
+        <section class="menu-categories" id="menu-panels">
 
             <div id="appetizers" class="active" role="tabpanel" aria-labelledby="tab-appetizers">
                 <div class="placeholder">
@@ -203,5 +204,6 @@
 
     </footer>
 
+    <script src="../scripts/menu.js" defer></script>
 </body>
 </html>

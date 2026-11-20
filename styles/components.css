@@ -1,3 +1,4 @@
+
 body{
     font-family:"Cormorant Garamond",serif;
     background:var(--paper);
@@ -5,19 +6,14 @@ body{
     line-height:1.65;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+a{ color:inherit; text-decoration:none; }
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible{
-
     outline:2px solid var(--gold);
     outline-offset:3px;
-
 }
 
 header{
@@ -35,12 +31,15 @@ header{
     display:flex;
     align-items:center;
     gap:1rem;
+    min-width:0;
     text-decoration:none;
     color:var(--charcoal);
 }
 
 .logo{
     width:50px;
+    max-width:50px;
+    height:auto;
     object-fit:contain;
 }
 
@@ -64,10 +63,14 @@ header{
     display:flex;
     flex-direction:column;
     align-items:flex-end;
+    flex-wrap:wrap;
     gap:1.6rem;
 }
 
 .nav-links a{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
     font-family:"Inter",sans-serif;
     font-size:.8rem;
     font-weight:500;
@@ -77,66 +80,50 @@ header{
     transition:opacity .3s ease;
 }
 
-.nav-links a:hover{
-    opacity:.6;
-}
-
+.nav-links a:hover{ opacity:.6; }
 .nav-links a.active{
     border-bottom:1px solid var(--charcoal);
     padding-bottom:2px;
 }
 
 .hero-content{
-    padding: 3rem 4rem 4rem 7rem;
-    box-sizing: border-box;
+    padding:3rem 4rem 4rem 7rem;
+    box-sizing:border-box;
 }
-
-.hero-content::after{
-    content:"";
-    display:block;
-    width:70px;
-    height:1px;
-    background:var(--gold, #C0842E);
-    margin-top:2rem;
-}
-
-
 
 .hero-content h1{
-    font-family: "Fraunces", serif;
-    font-optical-sizing: auto;
-    font-weight: 340;
-    font-size: 4.5rem;
-    line-height: 1.05;
-    color: var(--charcoal, #2B2420);
-    margin-bottom: 1.25rem;
+    font-family:"Fraunces",serif;
+    font-size:clamp(2.35rem,6vw,4.5rem);
+    font-weight:340;
+    line-height:1.05;
+    color:var(--charcoal,#2B2420);
+    margin-bottom:1.25rem;
+    overflow-wrap:anywhere;
 }
 
 .hero-content p{
-    font-family: "Cormorant Garamond", serif;
-    font-style: italic;
-    max-width: 480px;
-    font-size: 1.35rem;
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--ink, #3D2F23);
+    font-family:"Cormorant Garamond",serif;
+    font-style:italic;
+    max-width:480px;
+    font-size:clamp(1rem,2vw,1.35rem);
+    line-height:1.7;
+    color:var(--ink,#3D2F23);
 }
 
 .primary-button{
-    width: 100%;
-    border: none;
-    background: var(--charcoal);
-    color: var(--paper);
-    padding: 1rem;
-    font-family: "Inter", sans-serif;
-    font-size: .8rem;
-    font-weight: 600;
-    letter-spacing: .16rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background .3s ease, box-shadow .3s ease;
+    min-height:44px;
+    width:100%;
+    border:none;
+    background:var(--charcoal);
+    color:var(--paper);
+    padding:1rem 1.25rem;
+    font-family:"Inter",sans-serif;
+    font-size:.8rem;
+    font-weight:600;
+    letter-spacing:.16rem;
+    text-transform:uppercase;
+    cursor:pointer;
 }
-
 
 footer{
     background:var(--paper);
@@ -166,7 +153,8 @@ footer{
     margin-bottom:1.2rem;
 }
 
-.footer-brand p:last-of-type{
+.footer-brand p:last-of-type,
+.footer p{
     color:var(--ink);
     line-height:1.9;
 }
@@ -189,6 +177,9 @@ footer{
 }
 
 .footer a{
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
     text-decoration:none;
     color:var(--ink);
     transition:.3s ease;
@@ -199,84 +190,142 @@ footer{
     color:var(--gold);
 }
 
-.footer p{
-    color:var(--ink);
-    line-height:1.8;
-}
-
-
 ::selection{
-
     background:var(--charcoal);
-
     color:var(--paper);
-
 }
 
-@media (max-width: 960px){
-
+@media (max-width:960px){
     .footer{
-
         grid-template-columns:1fr 1fr;
-
         gap:3rem;
-
     }
 
     header,
     .hero-content,
     footer{
-
         padding-left:1.5rem;
         padding-right:1.5rem;
-
     }
-
-
 }
 
-@media (max-width: 768px){
-
-
+@media (max-width:768px){
     header{
+        padding:1.25rem 1rem 1.5rem;
+    }
 
-        padding:2rem 1.5rem;
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        gap:.8rem;
+    }
 
+    .brand{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .logo{
+        width:48px;
+        max-width:48px;
+    }
+
+    .nav-links{
+        width:100%;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        gap:.15rem .65rem;
+    }
+
+    .nav-links a{
+        min-height:44px;
+        padding:.5rem .25rem;
+        font-size:.68rem;
+        letter-spacing:.1em;
     }
 
     .hero-content{
-
-        padding:2rem 1.5rem 3rem;
-
+        padding:2rem 1rem 3rem;
     }
 
     .hero-content h1{
-
-        font-size:3.3rem;
-
+        font-size:clamp(2.35rem,11vw,3.3rem);
+        letter-spacing:.1em;
     }
 
     .hero-content p{
-
-        font-size:1rem;
-
-        line-height:1.8;
-
+        max-width:100%;
+        font-size:clamp(.95rem,4vw,1.05rem);
     }
 
-        footer{
-
-        padding:4rem 1.5rem 2rem;
-
+    footer{
+        margin-top:2.5rem;
+        padding:2.5rem 1.25rem 2rem;
     }
 
     .footer{
-
-        grid-template-columns:1fr;
-
-        gap:2.5rem;
-
+        grid-template-columns:1fr 1fr;
+        gap:1.5rem 1.25rem;
     }
 
-}
+    .footer-brand,
+    .footer-navigation{
+        grid-column:1 / -1;
+    }
 
+    .footer-brand h2{
+        font-size:1.75rem;
+        margin-bottom:.35rem;
+    }
+
+    .footer-brand p:first-of-type{
+        margin-bottom:.65rem;
+    }
+
+    .footer-brand p:last-of-type{
+        line-height:1.65;
+    }
+
+    .footer-navigation{
+        flex-direction:row;
+        flex-wrap:wrap;
+        align-items:center;
+        gap:.75rem 1.25rem;
+        padding:.85rem 0;
+        border-top:1px solid var(--border-hairline);
+        border-bottom:1px solid var(--border-hairline);
+    }
+
+    .footer-navigation h3{
+        width:100%;
+        margin-bottom:.15rem;
+    }
+
+    .footer-navigation a{
+        min-height:44px;
+        font-size:.9rem;
+    }
+
+    .footer-visit,
+    .footer-contact{
+        gap:.35rem;
+        font-size:.9rem;
+        line-height:1.45;
+        min-width:0;
+        overflow-wrap:anywhere;
+    }
+
+    .footer-visit h3,
+    .footer-contact h3{
+        margin-bottom:.35rem;
+    }
+
+    .footer-visit p,
+    .footer-contact a,
+    .footer-contact p{
+        font-size:.9rem;
+        line-height:1.45;
+        overflow-wrap:anywhere;
+    }
+}

@@ -135,7 +135,6 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     }
 }
 
-
 @media (max-width: 960px){
     .story-row{
         grid-template-columns: 1fr;
@@ -151,4 +150,53 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     .family-message{
         padding: 4rem 1.5rem;
     }
+}
+
+@media (max-width: 768px){
+    .story-row{
+        width:100%;
+        padding:2.5rem 1rem;
+        gap:1.5rem;
+    }
+
+    .story-text .section-heading h2{
+        font-size:clamp(2rem,9vw,2.75rem);
+        margin-bottom:1.25rem;
+    }
+
+    .story-text .section-content p{
+        font-size:clamp(1.05rem,4vw,1.15rem);
+        line-height:1.65;
+    }
+
+    .story-media,
+    .story-media img{
+        width:100%;
+        max-width:100%;
+    }
+
+    .story-media img{
+        height:auto;
+        aspect-ratio:4 / 5;
+    }
+
+    .family-message{
+        min-height:65vh;
+        padding:3.5rem 1rem;
+    }
+
+    .family-message blockquote{
+        font-size:clamp(1.35rem,6vw,1.9rem);
+    }
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.is-visible{
+    opacity:1;
+    transform:none;
 }

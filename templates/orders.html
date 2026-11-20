@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders | Matsumoto</title>
 
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
@@ -91,15 +92,21 @@
 
                     <label for="phone">Phone</label>
                     <div class="phone-input">
-                        <span>+81</span>
-                        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+                        <input type="tel" name="phone" id="phone" placeholder="090-1234-5678" inputmode="numeric" maxlength="13">
                     </div>
                 </div>
 
                 <div class="info-group">
 
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="name@example.com">
+
+                </div>
+
+                <div class="info-group">
+
                     <label for="address">Address</label>
-                    <input type="text" name="address" id="address" placeholder="Enter your address">
+                    <textarea name="address" id="address" rows="3" placeholder="Building, street, ward, postal code"></textarea>
 
                 </div>
 
@@ -135,7 +142,7 @@
                     <div class="form-group">
 
                         <label for="cvv">CVV</label>
-                        <input id="cvv" type="password" placeholder="•••">
+                        <input id="cvv" type="password" placeholder="•••" maxlength="3" inputmode="numeric">
 
                     </div>
 
@@ -279,5 +286,6 @@
 
     </footer>
 
+    <script src="../scripts/orders.js" defer></script>
 </body>
 </html>

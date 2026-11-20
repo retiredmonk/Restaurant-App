@@ -49,6 +49,15 @@
 
     </main>
 
+    <script>
+        const hero = document.querySelector('.hero');
+        const video = hero.querySelector('video');
+
+        video.play().catch(() => {
+            hero.classList.add('video-fallback');
+        });
+    </script>
+
 </body>
 
 </html>
