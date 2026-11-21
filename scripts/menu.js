@@ -199,12 +199,40 @@ function setCategory(categoryId) {
     });
 }
 
+function scrollToCategory(categoryId) {
+    let target = null;
+
+    if (categoryId === "all") {
+        target = document.querySelector(".menu-categories .food-card");
+    } else {
+        const panel = document.getElementById(categoryId);
+        target = panel ? panel.querySelector(".food-card") : null;
+    }
+
+    if (!target) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    target.scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "start"
+    });
+}
+
+function activateCategory(categoryId, shouldScroll = true) {
+    setCategory(categoryId);
+
+    if (shouldScroll) {
+        window.requestAnimationFrame(() => scrollToCategory(categoryId));
+    }
+}
+
 function initializeTabs() {
     const tabs = [...document.querySelectorAll(".menu-nav [role='tab']")];
 
     tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-            setCategory(tab.id.replace("tab-", ""));
+            const categoryId = tab.id.replace("tab-", "");
+            activateCategory(categoryId);
         });
 
         tab.addEventListener("keydown", (event) => {
@@ -222,6 +250,33 @@ function initializeTabs() {
             tabs[nextIndex].focus();
             tabs[nextIndex].click();
         });
+    });
+}
+
+function initializeCategoryLinks() {
+    document.querySelectorAll('[href="#appetizers"], [href="#soups-salads"], [href="#sushi-sashimi"], [href="#noodles"], [href="#rice-bowls"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+            const categoryId = link.hash.slice(1);
+            if (!document.getElementById(categoryId)) return;
+
+            event.preventDefault();
+            activateCategory(categoryId);
+            window.history.replaceState(null, "", `#${categoryId}`);
+        });
+    });
+
+    const categoryId = window.location.hash.slice(1);
+    if (Object.prototype.hasOwnProperty.call(categoryNames, categoryId)) {
+        activateCategory(categoryId);
+    } else {
+        setCategory("all");
+    }
+
+    window.addEventListener("hashchange", () => {
+        const nextCategory = window.location.hash.slice(1);
+        if (Object.prototype.hasOwnProperty.call(categoryNames, nextCategory)) {
+            activateCategory(nextCategory);
+        }
     });
 }
 
@@ -308,4 +363,4 @@ renderMenu();
 renderCart();
 initializeTabs();
 initializeCart();
-setCategory("all");
+initializeCategoryLinks();
