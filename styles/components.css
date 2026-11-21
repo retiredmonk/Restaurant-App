@@ -269,9 +269,12 @@ footer{
         gap:1.5rem 1.25rem;
     }
 
-    .footer-brand,
-    .footer-navigation{
+    .footer-brand{
         grid-column:1 / -1;
+    }
+
+    .footer-navigation{
+        display:none;
     }
 
     .footer-brand h2{
@@ -285,26 +288,6 @@ footer{
 
     .footer-brand p:last-of-type{
         line-height:1.65;
-    }
-
-    .footer-navigation{
-        flex-direction:row;
-        flex-wrap:wrap;
-        align-items:center;
-        gap:.75rem 1.25rem;
-        padding:.85rem 0;
-        border-top:1px solid var(--border-hairline);
-        border-bottom:1px solid var(--border-hairline);
-    }
-
-    .footer-navigation h3{
-        width:100%;
-        margin-bottom:.15rem;
-    }
-
-    .footer-navigation a{
-        min-height:44px;
-        font-size:.9rem;
     }
 
     .footer-visit,

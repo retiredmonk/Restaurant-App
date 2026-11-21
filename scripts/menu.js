@@ -93,14 +93,19 @@ function renderMenu() {
             const card = document.createElement("article");
             card.className = "food-card";
 
+            const copy = document.createElement("div");
+            copy.className = "food-card-copy";
+
             const name = document.createElement("h3");
             name.textContent = dish.name;
 
             const description = document.createElement("p");
             description.textContent = dish.description;
 
-            const footer = document.createElement("div");
-            footer.className = "food-card-footer";
+            copy.append(name, description);
+
+            const aside = document.createElement("div");
+            aside.className = "food-card-aside";
 
             const price = document.createElement("span");
             price.className = "food-price";
@@ -111,10 +116,10 @@ function renderMenu() {
             button.className = "add-to-cart";
             button.dataset.id = dish.id;
             button.setAttribute("aria-label", `Add ${dish.name} to cart`);
-            button.textContent = "Add to Cart";
+            button.textContent = "Add";
 
-            footer.append(price, button);
-            card.append(name, description, footer);
+            aside.append(price, button);
+            card.append(copy, aside);
             placeholder.append(card);
         });
     });
@@ -203,7 +208,7 @@ function scrollToCategory(categoryId) {
     let target = null;
 
     if (categoryId === "all") {
-        target = document.querySelector(".menu-categories .food-card");
+        target = document.querySelector("#appetizers .food-card");
     } else {
         const panel = document.getElementById(categoryId);
         target = panel ? panel.querySelector(".food-card") : null;
@@ -333,7 +338,7 @@ function initializeCart() {
         window.clearTimeout(buttonTimers.get(button));
         button.textContent = "Added ✓";
         const buttonTimer = window.setTimeout(() => {
-            button.textContent = "Add to Cart";
+            button.textContent = "Add";
             buttonTimers.delete(button);
         }, 1100);
         buttonTimers.set(button, buttonTimer);
