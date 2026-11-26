@@ -8,6 +8,7 @@
     width: min(1400px, 92%);
     margin: 0 auto;
     padding: 6rem 0 7rem;
+    color: var(--forest-bg);
 }
 
 .page-info{
@@ -24,9 +25,10 @@
 /* ---------- Cart review (matches the ticket-rail treatment in menu.css) ---------- */
 
 .cart{
-    background: var(--paper-dark);
-    border-top: 3px solid var(--gold);
-    border-left: 1px solid var(--wood);
+    background: var(--forest-bg);
+    color: var(--sand-bg);
+    border-top: 3px solid var(--accent-bronze);
+    border-left: 1px solid var(--accent-bronze);
     padding: 2rem 2rem 1.75rem;
     margin-bottom: 3rem;
 }
@@ -35,7 +37,7 @@
     font-family: "Fraunces", serif;
     font-size: 1.6rem;
     font-weight: 340;
-    color: var(--charcoal);
+    color: var(--sand-bg);
     margin-bottom: 1.5rem;
 }
 
@@ -58,12 +60,12 @@
 
 .cart-item-name{
     min-width: 0;
-    color: var(--charcoal);
+    color: var(--sand-bg);
     overflow-wrap: anywhere;
 }
 
 .cart-item-price{
-    color: var(--stone);
+    color: var(--sand-surface);
     white-space: nowrap;
 }
 
@@ -78,8 +80,8 @@
     width: 44px;
     height: 44px;
     border: 1px solid var(--border-hairline);
-    background: var(--paper);
-    color: var(--charcoal);
+    background: var(--forest-surface);
+    color: var(--sand-bg);
     cursor: pointer;
 }
 
@@ -89,7 +91,7 @@
 }
 
 .cart-empty{
-    color: var(--stone);
+    color: var(--sand-surface);
 }
 
 .subtotal{
@@ -106,13 +108,13 @@
     font-size: .78rem;
     letter-spacing: .15rem;
     text-transform: uppercase;
-    color: var(--stone);
+    color: var(--sand-surface);
 }
 
 .subtotal span:last-child{
     font-family: "Fraunces", serif;
     font-size: 1.35rem;
-    color: var(--charcoal);
+    color: var(--sand-bg);
 }
 
 /* ---------- Checkout grid ---------- */
@@ -127,7 +129,7 @@
 .customer-info,
 .payment,
 .order-summary{
-    background: var(--paper);
+    background: var(--sand-bg);
     border: 1px solid var(--border-hairline);
     padding: 2.5rem;
 }
@@ -193,7 +195,8 @@ label{
 .info-group input::placeholder,
 .info-group textarea::placeholder,
 .form-group input::placeholder{
-    color: #9A8C7C;
+    color: var(--forest-bg);
+    opacity:.55;
 }
 
 /* Seamless autofill styling for Safari and WebKit browsers. */
@@ -208,7 +211,7 @@ label{
     font-family: "Inter", sans-serif;
     font-size: .78rem;
     line-height: 1.4;
-    color: #A85F50;
+    color: var(--forest-bg);
 }
 
 /* Border-color feedback on focus, WITHOUT suppressing the global
@@ -252,7 +255,8 @@ label{
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    background: var(--paper-dark);
+    background: var(--forest-bg);
+    color: var(--sand-bg);
 }
 
 .summary-row{
@@ -260,7 +264,7 @@ label{
     justify-content: space-between;
     align-items: center;
     padding: .35rem 0;
-    color: var(--ink);
+    color: var(--sand-bg);
 }
 
 .summary-row span:first-child{
@@ -268,13 +272,13 @@ label{
     font-size: .78rem;
     text-transform: uppercase;
     letter-spacing: .15rem;
-    color: var(--stone);
+    color: var(--sand-surface);
 }
 
 .summary-row span:last-child{
     font-family: "Cormorant Garamond", serif;
     font-size: 1.2rem;
-    color: var(--charcoal);
+    color: var(--sand-bg);
 }
 
 .order-summary hr{
@@ -312,13 +316,13 @@ label{
     font-size: .78rem;
     letter-spacing: .15rem;
     text-transform: uppercase;
-    color: var(--stone);
+    color: var(--sand-surface);
 }
 
 .summary-extra span{
     font-family: "Fraunces", serif;
     font-size: 1.3rem;
-    color: var(--charcoal);
+    color: var(--sand-bg);
 }
 
 .confirm-order{
@@ -402,7 +406,7 @@ label{
     display: grid;
     place-items: center;
     padding: 1.25rem;
-    background: rgba(35, 30, 25, .58);
+    background: var(--overlay-dark);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }

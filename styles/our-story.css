@@ -14,11 +14,23 @@ main > section{
 }
 
 main > section:not(.family-message):nth-of-type(even){
-    background: var(--paper-dark);
+    background: var(--forest-bg);
+    color: var(--sand-bg);
 }
 
 main > section:not(.family-message):nth-of-type(even) .story-media{
     order: -1;
+}
+
+main > section:not(.family-message):nth-of-type(odd){
+    background: var(--sand-bg);
+    color: var(--forest-bg);
+}
+
+main > section:not(.family-message):nth-of-type(even) .story-text .section-heading h2,
+main > section:not(.family-message):nth-of-type(even) .story-text .section-content p,
+main > section:not(.family-message):nth-of-type(even) .story-text .section-heading p{
+    color: var(--sand-bg);
 }
 
 
@@ -87,7 +99,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     padding: 6rem 4rem;
     box-sizing: border-box;
     background:
-        linear-gradient(180deg, rgba(22,43,34,.78) 0%, rgba(22,43,34,.62) 45%, rgba(22,43,34,.86) 100%),
+        linear-gradient(180deg, rgba(10,15,12,.78) 0%, rgba(10,15,12,.62) 45%, rgba(10,15,12,.86) 100%),
         url("../assets/images/story-images/story-image-1.jpg") center / cover no-repeat;
     text-align: center;
 }
@@ -125,7 +137,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     font-weight: 600;
     letter-spacing: .2rem;
     text-transform: uppercase;
-    color: var(--gold, #C0842E);
+    color: var(--accent-bronze);
 }
 
 

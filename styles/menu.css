@@ -6,7 +6,7 @@
     align-items: center;
     gap: 3rem;
     padding: 1.4rem 4rem;
-    background: var(--paper-dark);
+    background: var(--forest-bg);
     border-top: 1px solid var(--border-hairline);
     border-bottom: 1px solid var(--border-hairline);
     position: sticky;
@@ -19,7 +19,7 @@
     font-size: 1.15rem;
     font-weight: 500;
     letter-spacing: .04rem;
-    color: var(--stone);
+    color: var(--sand-bg);
     background: none;
     border: none;
     border-bottom: 1px solid transparent;
@@ -29,12 +29,12 @@
 }
 
 .menu-nav button:hover{
-    color: var(--gold);
+    color: var(--accent-bronze);
 }
 
 .menu-nav button[aria-selected="true"]{
-    color: var(--charcoal);
-    border-bottom-color: var(--gold);
+    color: var(--sand-bg);
+    border-bottom-color: var(--accent-bronze);
 }
 
 
@@ -44,6 +44,7 @@
     align-items: start;
     gap: 3rem;
     padding: 3.5rem 4rem;
+    background: var(--sand-bg);
 }
 
 .menu-categories{
@@ -80,7 +81,7 @@
     align-items: start;
     gap: 1.5rem;
     min-width: 0;
-    background: var(--paper);
+    background: var(--sand-surface);
     border: 0;
     margin-bottom: 1.75rem;
     padding: 0;
@@ -133,8 +134,8 @@
     min-width: 72px;
     min-height: 44px;
     border: 1px solid var(--border-hairline);
-    background: transparent;
-    color: var(--charcoal);
+    background: var(--forest-bg);
+    color: var(--sand-bg);
     font-family: "Inter", sans-serif;
     font-size: .68rem;
     font-weight: 600;
@@ -146,9 +147,9 @@
 }
 
 .add-to-cart:hover{
-    border-color: var(--gold);
-    background: transparent;
-    color: var(--gold);
+    border-color: var(--accent-bronze);
+    background: var(--forest-surface);
+    color: var(--sand-bg);
 }
 
 .cart-item{
@@ -162,12 +163,12 @@
 
 .cart-item-name{
     min-width: 0;
-    color: var(--charcoal);
+    color: var(--sand-bg);
     overflow-wrap: anywhere;
 }
 
 .cart-item-price{
-    color: var(--stone);
+    color: var(--sand-surface);
     white-space: nowrap;
 }
 
@@ -182,8 +183,8 @@
     width: 44px;
     height: 44px;
     border: 1px solid var(--border-hairline);
-    background: var(--paper);
-    color: var(--charcoal);
+    background: var(--forest-surface);
+    color: var(--sand-bg);
     cursor: pointer;
 }
 
@@ -202,7 +203,8 @@
     top: 2rem;
     display: flex;
     flex-direction: column;
-    background: var(--sand);
+    background: var(--forest-bg);
+    color: var(--sand-bg);
     border-top: none;
     border-left: 3px solid var(--wood);
     padding: 2rem 1.75rem;
@@ -213,7 +215,7 @@
     font-family: "Fraunces", serif;
     font-weight: 350;
     font-size: 1.3rem;
-    color: var(--charcoal);
+    color: var(--sand-bg);
 }
 
 #cart-items{
@@ -221,7 +223,7 @@
     flex-direction: column;
     gap: .75rem;
     min-height: 60px;
-    color: var(--stone);
+    color: var(--sand-bg);
     font-size: .95rem;
 }
 

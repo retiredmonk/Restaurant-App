@@ -11,6 +11,8 @@
     align-items:start;
 
     padding:9rem 0 6rem;
+    background:var(--sand-bg);
+    color:var(--forest-bg);
 
 }
 
@@ -34,7 +36,7 @@
 .reservation-form>p{
 
     max-width:420px;
-    color:var(--stone);
+    color:var(--forest-bg);
     line-height:1.8;
 
     margin-bottom:1rem;
@@ -87,8 +89,8 @@ select{
 }
 
 input::placeholder{
-
-    color:#9A8C7C;
+    color:var(--forest-bg);
+    opacity:.55;
 
 }
 
@@ -119,7 +121,7 @@ select{
 
     cursor:pointer;
 
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%238B6438' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23B59268' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
 
     background-repeat:no-repeat;
     background-position:right center;
@@ -176,8 +178,8 @@ input[type="date"]{
 
     background:linear-gradient(
         to top,
-        rgba(22,43,34,.78),
-        rgba(22,43,34,.22),
+        rgba(10,15,12,.78),
+        rgba(10,15,12,.22),
         transparent
     );
 
@@ -193,7 +195,7 @@ input[type="date"]{
 
     padding:3rem;
 
-    color:white;
+    color:var(--sand-bg);
 
     z-index:2;
 
@@ -234,14 +236,16 @@ input[type="date"]{
 
     line-height:1.8;
 
-    color:rgba(255,255,255,.92);
+    color:var(--sand-bg);
 
 }
 .reservation-policies{
-
     width:min(900px,90%);
-
-    margin:5rem auto 7rem;
+    max-width:none;
+    margin:0 auto;
+    padding:5rem 5% 7rem;
+    background:var(--forest-bg);
+    color:var(--sand-bg);
 
 }
 
@@ -261,7 +265,7 @@ input[type="date"]{
     font-size:2rem;
     font-weight:340;
 
-    color:var(--charcoal);
+    color:var(--sand-bg);
 
     margin-bottom:1rem;
 
@@ -271,7 +275,7 @@ input[type="date"]{
 
     max-width:760px;
 
-    color:var(--ink);
+    color:var(--sand-bg);
 
     line-height:2;
 
@@ -281,7 +285,7 @@ input[type="date"]{
 
 .policies a{
 
-    color:var(--ink);
+    color:var(--sand-bg);
 
     border-bottom:1px solid transparent;
 
@@ -430,7 +434,7 @@ input[type="date"]{
     font-family:"Inter",sans-serif;
     font-size:.78rem;
     line-height:1.4;
-    color:#A85F50;
+    color:var(--forest-bg);
 }
 
 .private-dining-note{
@@ -456,7 +460,7 @@ input[type="date"]{
     display:grid;
     place-items:center;
     padding:1.25rem;
-    background:rgba(35,30,25,.58);
+    background:var(--overlay-dark);
     backdrop-filter:blur(5px);
     -webkit-backdrop-filter:blur(5px);
 }

@@ -7,22 +7,29 @@
 }
 
 :root{
-    --sand:#F4EFE6;
-    --sand-dark:#EAE2D3;
-    --paper:var(--sand);
-    --paper-dark:var(--sand-dark);
-    --forest:#162B22;
-    --forest-button:#1F3B2E;
-    --forest-muted:#4A5D54;
-    --sage:#7A9184;
-    --bronze:#A67C52;
-    --wood:var(--bronze);
-    --charcoal:var(--forest);
-    --stone:var(--forest-muted);
-    --ink:var(--forest);
-    --gold:var(--bronze);
-    --gold-glow:var(--sage);
-    --border-hairline:rgba(166,124,82,.38);
+    --sand-bg:#F6F1E7;
+    --sand-surface:#ECE5D8;
+    --forest-bg:#14281D;
+    --forest-surface:#1C3527;
+    --accent-bronze:#B59268;
+    --overlay-dark:rgba(10,15,12,.58);
+
+    --sand:var(--sand-bg);
+    --sand-dark:var(--sand-surface);
+    --paper:var(--sand-bg);
+    --paper-dark:var(--sand-surface);
+    --forest:var(--forest-bg);
+    --forest-button:var(--forest-bg);
+    --forest-muted:var(--sand-bg);
+    --sage:var(--sand-surface);
+    --bronze:var(--accent-bronze);
+    --wood:var(--accent-bronze);
+    --charcoal:var(--forest-bg);
+    --stone:var(--forest-bg);
+    --ink:var(--forest-bg);
+    --gold:var(--accent-bronze);
+    --gold-glow:var(--accent-bronze);
+    --border-hairline:var(--accent-bronze);
     --ease-editorial:cubic-bezier(0.22,1,0.36,1);
 }
 
