@@ -14,7 +14,7 @@ main > section{
 }
 
 main > section:not(.family-message):nth-of-type(even){
-    background: var(--paper-dark, #E8DCC5);
+    background: var(--paper-dark);
 }
 
 main > section:not(.family-message):nth-of-type(even) .story-media{
@@ -28,7 +28,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     font-weight: 600;
     letter-spacing: .22rem;
     text-transform: uppercase;
-    color: var(--gold, #C0842E);
+    color: var(--gold);
     margin-bottom: 1rem;
 }
 
@@ -37,7 +37,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     font-weight: 340;
     font-size: 2.75rem;
     line-height: 1.15;
-    color: var(--charcoal, #2B2420);
+    color: var(--charcoal);
     margin-bottom: 2rem;
 }
 
@@ -49,7 +49,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     font-family: "Cormorant Garamond", serif;
     font-size: 1.15rem;
     line-height: 1.9;
-    color: var(--ink, #3D2F23);
+    color: var(--ink);
     margin-bottom: 1.35rem;
 }
 
@@ -62,7 +62,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
 .story-media{
     aspect-ratio: 4 / 5;
     overflow: hidden;
-    box-shadow: 0 24px 60px -24px rgba(43, 36, 32, .4);
+    border:1px solid var(--border-hairline);
 }
 
 .story-media img{
@@ -87,7 +87,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     padding: 6rem 4rem;
     box-sizing: border-box;
     background:
-        linear-gradient(180deg, rgba(43,36,32,.72) 0%, rgba(43,36,32,.55) 45%, rgba(43,36,32,.8) 100%),
+        linear-gradient(180deg, rgba(22,43,34,.78) 0%, rgba(22,43,34,.62) 45%, rgba(22,43,34,.86) 100%),
         url("../assets/images/story-images/story-image-1.jpg") center / cover no-repeat;
     text-align: center;
 }
@@ -103,7 +103,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     font-style: italic;
     font-size: 1.9rem;
     line-height: 1.6;
-    color: var(--paper, #F5EDE0);
+    color: var(--paper);
     margin-bottom: 2rem;
 }
 
@@ -114,7 +114,7 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
     font-style: normal;
     font-size: 6rem;
     line-height: 1;
-    color: var(--gold, #C0842E);
+    color: var(--gold);
     opacity: .55;
     margin-bottom: .5rem;
 }

@@ -4,12 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matsumoto is a third-generation Japanese restaurant in Shibuya, blending seasonal craft with thoughtful hospitality.">
+    <meta property="og:title" content="Matsumoto | Japanese Fine Dining">
+    <meta property="og:description" content="Three generations of Japanese hospitality, seasonality, and refined craftsmanship in Shibuya.">
+    <meta property="og:image" content="../assets/images/story-images/story-image-1.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Matsumoto | Japanese Fine Dining">
+    <meta name="twitter:description" content="Three generations of Japanese hospitality, seasonality, and refined craftsmanship in Shibuya.">
+    <meta name="twitter:image" content="../assets/images/story-images/story-image-1.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 
     <link rel="stylesheet" href="../styles/globals.css">
     <link rel="stylesheet" href="../styles/home.css">
@@ -36,6 +45,8 @@
                 loop
                 muted
                 playsinline
+                width="1920"
+                height="1080"
             >
                 <source src="../assets/videos/homepage-video.mp4" type="video/mp4">
             </video>
@@ -49,6 +60,7 @@
 
     </main>
 
+    <script src="../scripts/globals.js" defer></script>
     <script>
         const hero = document.querySelector('.hero');
         const video = hero.querySelector('video');

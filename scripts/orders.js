@@ -462,9 +462,22 @@ if (orderForm) {
             createdAt: new Date().toISOString()
         };
 
-        localStorage.removeItem(storageKey);
-        renderCart();
-        showConfirmation(payload, cart);
+        const confirmButton = document.getElementById("confirm-order-btn");
+        if (confirmButton) {
+            confirmButton.disabled = true;
+            confirmButton.setAttribute("aria-busy", "true");
+            confirmButton.innerHTML = '<span class="button-spinner" aria-hidden="true"></span> Processing order';
+        }
+
+        window.setTimeout(() => {
+            localStorage.removeItem(storageKey);
+            renderCart();
+            if (confirmButton) {
+                confirmButton.removeAttribute("aria-busy");
+                confirmButton.textContent = "PLACE ORDER";
+            }
+            showConfirmation(payload, cart);
+        }, 600);
     });
 }
 

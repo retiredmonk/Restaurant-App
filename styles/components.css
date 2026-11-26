@@ -96,7 +96,7 @@ header{
     font-size:clamp(2.35rem,6vw,4.5rem);
     font-weight:340;
     line-height:1.05;
-    color:var(--charcoal,#2B2420);
+    color:var(--charcoal);
     margin-bottom:1.25rem;
     overflow-wrap:anywhere;
 }
@@ -107,14 +107,14 @@ header{
     max-width:480px;
     font-size:clamp(1rem,2vw,1.35rem);
     line-height:1.7;
-    color:var(--ink,#3D2F23);
+    color:var(--ink);
 }
 
 .primary-button{
     min-height:44px;
     width:100%;
     border:none;
-    background:var(--charcoal);
+    background:var(--forest-button);
     color:var(--paper);
     padding:1rem 1.25rem;
     font-family:"Inter",sans-serif;
@@ -123,7 +123,35 @@ header{
     letter-spacing:.16rem;
     text-transform:uppercase;
     cursor:pointer;
+    border:1px solid transparent;
+    transition:background .25s ease,transform .18s ease,border-color .25s ease;
 }
+ .primary-button:hover{ background:var(--forest); }
+ .primary-button:active{ transform:scale(.98); }
+ .primary-button:disabled{ opacity:.55; cursor:not-allowed; }
+
+.nav-links a,
+.footer a,
+.policies a{
+    position:relative;
+}
+.nav-links a::after,
+.footer a::after,
+.policies a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:.35rem;
+    width:100%;
+    height:1px;
+    background:var(--bronze);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .28s var(--ease-editorial);
+}
+.nav-links a:hover::after,
+.footer a:hover::after,
+.policies a:hover::after{ transform:scaleX(1); }
 
 footer{
     background:var(--paper);

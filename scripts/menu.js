@@ -335,6 +335,13 @@ function initializeCart() {
         renderCart();
         showToast(dish.name);
 
+        const cartPanel = document.getElementById("cart");
+        if (cartPanel) {
+            cartPanel.classList.remove("cart-bump");
+            void cartPanel.offsetWidth;
+            cartPanel.classList.add("cart-bump");
+        }
+
         window.clearTimeout(buttonTimers.get(button));
         button.textContent = "Added ✓";
         const buttonTimer = window.setTimeout(() => {

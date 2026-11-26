@@ -425,6 +425,15 @@ if (form) {
             createdAt: new Date().toISOString()
         };
 
-        showConfirmation(payload);
+        const originalText = reserveButton.textContent;
+        reserveButton.disabled = true;
+        reserveButton.setAttribute("aria-busy", "true");
+        reserveButton.innerHTML = '<span class="button-spinner" aria-hidden="true"></span> Checking availability';
+        window.setTimeout(() => {
+            reserveButton.disabled = false;
+            reserveButton.removeAttribute("aria-busy");
+            reserveButton.textContent = originalText;
+            showConfirmation(payload);
+        }, 600);
     });
 }
