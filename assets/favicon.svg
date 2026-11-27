@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#F4EFE6"/>
-  <circle cx="32" cy="32" r="23" fill="#162B22"/>
-  <path d="M20 24h24v4H20zm4 7h16v4H24zm-4 7h24v4H20z" fill="#F4EFE6"/>
+  <rect width="64" height="64" fill="#0E0E0E"/>
+  <circle cx="32" cy="32" r="20.8" fill="none" stroke="#FAF8F5" stroke-width="2.2"/>
+  <circle cx="32" cy="32" r="16.5" fill="none" stroke="#FAF8F5" stroke-width="1.5"/>
+  <text x="32" y="37" fill="#FAF8F5" font-family="'Noto Serif CJK JP','Yu Mincho',serif" font-size="12" font-weight="700" letter-spacing="1" text-anchor="middle">松本</text>
 </svg>

@@ -11,6 +11,7 @@ if (form) {
     const date = document.getElementById("date");
     const time = document.getElementById("time");
     const reserveButton = document.getElementById("reserve-button");
+    let isSubmitting = false;
 
     function localTodayString(now = new Date()) {
         const year = now.getFullYear();
@@ -380,12 +381,16 @@ if (form) {
         }
 
         doneButton.addEventListener("click", closeModal);
+        backdrop.addEventListener("click", (event) => {
+            if (event.target === backdrop) closeModal();
+        });
         document.addEventListener("keydown", handleKeydown);
         doneButton.focus();
     }
 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
+        if (isSubmitting) return;
         updateTimeAvailability();
 
         [name, email, guests, occasion, otherOccasion, date, time].forEach((field) => {
@@ -426,10 +431,12 @@ if (form) {
         };
 
         const originalText = reserveButton.textContent;
+        isSubmitting = true;
         reserveButton.disabled = true;
         reserveButton.setAttribute("aria-busy", "true");
         reserveButton.innerHTML = '<span class="button-spinner" aria-hidden="true"></span> Checking availability';
         window.setTimeout(() => {
+            isSubmitting = false;
             reserveButton.disabled = false;
             reserveButton.removeAttribute("aria-busy");
             reserveButton.textContent = originalText;

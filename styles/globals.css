@@ -28,11 +28,28 @@ html{
 body{
     min-width: 0;
     max-width: 100%;
+    padding-bottom:env(safe-area-inset-bottom, 0px);
     font-family:"DM Sans",sans-serif;
     background:var(--bg-canvas);
     color:var(--ink-primary);
     line-height:1.6;
     overflow-x:hidden;
+}
+
+input,
+select,
+textarea{
+    font-size:16px;
+}
+
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+button:active:not(:disabled),
+a:active{
+    opacity:.75;
 }
 
 img,
@@ -49,6 +66,15 @@ video{
 .reveal.is-visible{
     opacity:1;
     transform:translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+    outline:2px solid var(--ink-primary);
+    outline-offset:3px;
 }
 
 .button-spinner{

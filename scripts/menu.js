@@ -55,7 +55,6 @@ function loadCart() {
                 quantity: Math.max(1, Math.floor(item.quantity))
             }));
     } catch {
-        localStorage.removeItem(storageKey);
         cart = [];
     }
 }

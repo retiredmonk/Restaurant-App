@@ -11,6 +11,10 @@
     overflow:hidden;
 }
 
+@media (hover:hover){
+    .navbar a:hover{ opacity:.6; }
+}
+
 html,
 body{
     margin:0;
@@ -97,10 +101,6 @@ body{
     transition:opacity .4s ease;
 }
 
-.navbar a:hover{
-    opacity:.6;
-}
-
 .hero-content{
     position:absolute;
 
@@ -110,7 +110,7 @@ body{
     transform:translate(-50%,-50%);
 
     width:100%;
-    padding:0 1.5rem;
+    padding:0 1.5rem calc(env(safe-area-inset-bottom, 0px) + 1rem);
 
     text-align:center;
 

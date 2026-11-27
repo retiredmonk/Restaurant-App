@@ -124,14 +124,7 @@ function renderCart() {
 }
 
 function updateCart(action, id) {
-    let cart;
-    try {
-        const savedCart = JSON.parse(localStorage.getItem(storageKey) || "[]");
-        cart = Array.isArray(savedCart) ? savedCart : [];
-    } catch {
-        cart = [];
-    }
-
+    const cart = loadCart();
     const item = cart.find((cartItem) => cartItem.id === id);
     if (!item) return;
 
@@ -368,6 +361,10 @@ function showConfirmation(payload, cart) {
         }
     };
 
+    backdrop.addEventListener("click", (event) => {
+        if (event.target === backdrop) closeModal();
+    });
+
     const handleKeydown = (event) => {
         if (event.key === "Escape") {
             event.preventDefault();
@@ -397,8 +394,10 @@ function showConfirmation(payload, cart) {
 
 const orderForm = document.querySelector(".place-order");
 if (orderForm) {
+    let isProcessing = false;
     orderForm.addEventListener("submit", (event) => {
         event.preventDefault();
+        if (isProcessing) return;
 
         const cart = loadCart();
         if (cart.length === 0) return;
@@ -463,6 +462,7 @@ if (orderForm) {
         };
 
         const confirmButton = document.getElementById("confirm-order-btn");
+        isProcessing = true;
         if (confirmButton) {
             confirmButton.disabled = true;
             confirmButton.setAttribute("aria-busy", "true");
@@ -476,6 +476,7 @@ if (orderForm) {
                 confirmButton.removeAttribute("aria-busy");
                 confirmButton.textContent = "PLACE ORDER";
             }
+            isProcessing = false;
             showConfirmation(payload, cart);
         }, 600);
     });

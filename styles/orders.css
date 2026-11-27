@@ -329,8 +329,6 @@ label{
 }
 
 
-#confirm-order-btn:hover{ background: var(--ink-muted); }
-
 #confirm-order-btn:disabled{
     opacity: .55;
     cursor: not-allowed;
@@ -419,6 +417,7 @@ label{
     position: relative;
     width: min(560px, 100%);
     max-height: calc(100vh - 2.5rem);
+    max-height: calc(100dvh - 2.5rem);
     overflow-y: auto;
     padding: 2.5rem;
     background: var(--bg-canvas);
@@ -470,7 +469,6 @@ label{
     cursor: pointer;
     transition:background .25s ease,color .25s ease;
 }
-.order-modal-close:hover{ background:var(--ink-primary); color:var(--bg-canvas); }
 
 
 @media (max-width: 960px){
@@ -562,6 +560,7 @@ label{
 
     .order-modal{
         max-height: calc(100vh - 1.5rem);
+        max-height: calc(100dvh - 1.5rem);
         padding: 1.5rem;
     }
 
@@ -588,4 +587,9 @@ label{
         width: 100%;
     }
 
+}
+
+@media (hover:hover){
+    #confirm-order-btn:hover{ background:var(--ink-muted); }
+    .order-modal-close:hover{ background:var(--ink-primary); color:var(--bg-canvas); }
 }
