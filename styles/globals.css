@@ -7,29 +7,15 @@
 }
 
 :root{
-    --sand-bg:#F6F1E7;
-    --sand-surface:#ECE5D8;
-    --forest-bg:#14281D;
-    --forest-surface:#1C3527;
-    --accent-bronze:#B59268;
-    --overlay-dark:rgba(10,15,12,.58);
-
-    --sand:var(--sand-bg);
-    --sand-dark:var(--sand-surface);
-    --paper:var(--sand-bg);
-    --paper-dark:var(--sand-surface);
-    --forest:var(--forest-bg);
-    --forest-button:var(--forest-bg);
-    --forest-muted:var(--sand-bg);
-    --sage:var(--sand-surface);
-    --bronze:var(--accent-bronze);
-    --wood:var(--accent-bronze);
-    --charcoal:var(--forest-bg);
-    --stone:var(--forest-bg);
-    --ink:var(--forest-bg);
-    --gold:var(--accent-bronze);
-    --gold-glow:var(--accent-bronze);
-    --border-hairline:var(--accent-bronze);
+    --bg-canvas:#FAF8F5;
+    --bg-surface:#F2EFE9;
+    --ink-primary:#1A1A1A;
+    --ink-muted:#66635E;
+    --ink-inverse:#FFFFFF;
+    --border-hairline:#E2DDD5;
+    --overlay-dark:rgba(0,0,0,.58);
+    --hero-overlay-start:rgba(0,0,0,.3);
+    --hero-overlay-end:rgba(0,0,0,.45);
     --ease-editorial:cubic-bezier(0.22,1,0.36,1);
 }
 
@@ -42,8 +28,9 @@ html{
 body{
     min-width: 0;
     max-width: 100%;
-    background:var(--sand);
-    color:var(--forest);
+    font-family:"DM Sans",sans-serif;
+    background:var(--bg-canvas);
+    color:var(--ink-primary);
     line-height:1.6;
     overflow-x:hidden;
 }

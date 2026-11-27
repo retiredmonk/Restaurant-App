@@ -6,20 +6,20 @@
     align-items: center;
     gap: 3rem;
     padding: 1.4rem 4rem;
-    background: var(--forest-bg);
-    border-top: 1px solid var(--border-hairline);
-    border-bottom: 1px solid var(--border-hairline);
+    background: var(--bg-canvas);
+    border: 0;
     position: sticky;
     top: 0;
     z-index: 20;
 }
 
-.menu-nav button{
-    font-family: "Cormorant Garamond", serif;
+.menu-nav a{
+    font-family: "DM Sans", sans-serif;
     font-size: 1.15rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: .04rem;
-    color: var(--sand-bg);
+    color: var(--ink-primary);
+    text-decoration: none;
     background: none;
     border: none;
     border-bottom: 1px solid transparent;
@@ -28,13 +28,14 @@
     transition: color .3s ease, border-color .3s ease;
 }
 
-.menu-nav button:hover{
-    color: var(--accent-bronze);
+.menu-nav a:hover{
+    color: var(--ink-muted);
 }
 
-.menu-nav button[aria-selected="true"]{
-    color: var(--sand-bg);
-    border-bottom-color: var(--accent-bronze);
+.menu-nav a.active,
+.menu-nav a[aria-current="true"]{
+    color: var(--ink-primary);
+    border-bottom-color: var(--ink-primary);
 }
 
 
@@ -43,8 +44,8 @@
     grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
     align-items: start;
     gap: 3rem;
-    padding: 3.5rem 4rem;
-    background: var(--sand-bg);
+    padding: 5rem 4rem;
+    background: var(--bg-canvas);
 }
 
 .menu-categories{
@@ -56,22 +57,21 @@
     min-height: 180px;
 }
 
-.menu-categories > div{
-    margin-bottom: 2.5rem;
+.menu-categories > section{
+    margin-bottom: 6rem;
     scroll-margin-top: 7rem;
 }
 
-.menu-categories > div:last-child{
+.menu-categories > section:last-child{
     margin-bottom: 0;
 }
 
 .category-heading{
-    font-family: "Fraunces", serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--charcoal);
-    margin: 3.5rem 0 1.75rem;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 300;
+    color: var(--ink-primary);
+    margin: 0 0 2.5rem;
     scroll-margin-top: 6rem;
 }
 
@@ -81,15 +81,16 @@
     align-items: start;
     gap: 1.5rem;
     min-width: 0;
-    background: var(--sand-surface);
+    background: transparent;
     border: 0;
-    margin-bottom: 1.75rem;
+    border: 0;
+    margin-bottom: 2.25rem;
     padding: 0;
     scroll-margin-top: 6rem;
 }
 
 .food-card:hover{
-    border: 0;
+    border-bottom: 1px solid var(--border-hairline);
 }
 
 .food-card-copy{
@@ -97,18 +98,19 @@
 }
 
 .food-card-copy h3{
-    font-family: "Inter", sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--charcoal);
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink-primary);
     margin-bottom: .35rem;
 }
 
 .food-card-copy p{
-    font-family: "Cormorant Garamond", serif;
-    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    color: var(--ink-primary);
     max-width: 48rem;
     font-size: 1.12rem;
     line-height: 1.55;
@@ -123,8 +125,8 @@
 }
 
 .food-price{
-    font-family: "Fraunces", serif;
-    color: var(--stone);
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink-muted);
     text-align: right;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
@@ -133,23 +135,27 @@
 .add-to-cart{
     min-width: 72px;
     min-height: 44px;
-    border: 1px solid var(--border-hairline);
-    background: var(--forest-bg);
-    color: var(--sand-bg);
-    font-family: "Inter", sans-serif;
-    font-size: .68rem;
-    font-weight: 600;
-    letter-spacing: .12rem;
-    text-transform: uppercase;
+    border: 1px solid var(--ink-primary);
+    background: transparent;
+    color: var(--ink-primary);
+    font-family: "DM Sans", sans-serif;
+    font-size: .78rem;
+    font-weight: 500;
+    letter-spacing: .04rem;
+    text-transform: none;
     cursor: pointer;
     padding: .65rem .8rem;
     transition: border-color .25s ease, background .25s ease, color .25s ease;
 }
 
 .add-to-cart:hover{
-    border-color: var(--accent-bronze);
-    background: var(--forest-surface);
-    color: var(--sand-bg);
+    border-color: var(--ink-primary);
+    background: var(--ink-primary);
+    color: var(--bg-canvas);
+}
+.add-to-cart:active{
+    background: var(--ink-primary);
+    color: var(--bg-canvas);
 }
 
 .cart-item{
@@ -163,12 +169,12 @@
 
 .cart-item-name{
     min-width: 0;
-    color: var(--sand-bg);
+    color: var(--ink-primary);
     overflow-wrap: anywhere;
 }
 
 .cart-item-price{
-    color: var(--sand-surface);
+    color: var(--ink-muted);
     white-space: nowrap;
 }
 
@@ -182,9 +188,9 @@
 .cart-item-controls button{
     width: 44px;
     height: 44px;
-    border: 1px solid var(--border-hairline);
-    background: var(--forest-surface);
-    color: var(--sand-bg);
+    border: 1px solid var(--ink-primary);
+    background: transparent;
+    color: var(--ink-primary);
     cursor: pointer;
 }
 
@@ -194,7 +200,7 @@
 }
 
 .cart-empty{
-    color: var(--stone);
+    color: var(--ink-muted);
 }
 
 
@@ -203,19 +209,18 @@
     top: 2rem;
     display: flex;
     flex-direction: column;
-    background: var(--forest-bg);
-    color: var(--sand-bg);
-    border-top: none;
-    border-left: 3px solid var(--wood);
+    background: var(--bg-surface);
+    color: var(--ink-primary);
+    border: 1px solid var(--border-hairline);
     padding: 2rem 1.75rem;
     gap: 1.5rem;
 }
 
 .cart h2{
-    font-family: "Fraunces", serif;
-    font-weight: 350;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
     font-size: 1.3rem;
-    color: var(--sand-bg);
+    color: var(--ink-primary);
 }
 
 #cart-items{
@@ -223,7 +228,7 @@
     flex-direction: column;
     gap: .75rem;
     min-height: 60px;
-    color: var(--sand-bg);
+    color: var(--ink-primary);
     font-size: .95rem;
 }
 
@@ -233,38 +238,38 @@
     align-items: baseline;
     padding-top: 1rem;
     border-top: 1px solid var(--border-hairline);
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: .1rem;
     font-size: .75rem;
-    color: var(--stone);
+    color: var(--ink-muted);
 }
 
 .subtotal #subtotal{
-    font-family: "Fraunces", serif;
+    font-family: "Cormorant Garamond", serif;
     text-transform: none;
     letter-spacing: normal;
     font-size: 1.1rem;
-    color: var(--charcoal);
+    color: var(--ink-primary);
 }
 
 .cart > a{
     display: block;
     text-align: center;
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: .8rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .15rem;
     text-transform: uppercase;
-    color: var(--paper);
-    background: var(--charcoal);
+    color: var(--bg-canvas);
+    background: var(--ink-primary);
     padding: 1rem;
     transition: background .3s ease, transform .18s ease;
 }
 
 .cart > a:hover{
-    background: var(--wood);
+    background: var(--ink-muted);
 }
 
 .cart-toast{
@@ -274,12 +279,12 @@
     z-index: 30;
     max-width: calc(100vw - 2rem);
     padding: .85rem 1rem;
-    background: var(--charcoal);
-    color: var(--paper);
-    border-left: 3px solid var(--gold);
-    font-family: "Inter", sans-serif;
+    background: var(--ink-primary);
+    color: var(--bg-canvas);
+    border-left: 1px solid var(--border-hairline);
+    font-family: "DM Sans", sans-serif;
     font-size: .72rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .08rem;
     text-transform: uppercase;
     opacity: 0;
@@ -320,23 +325,23 @@
         overflow-x: auto;
         white-space: nowrap;
         scrollbar-width: none;
-        padding: .35rem 1rem;
+        padding: .35rem 1.5rem;
     }
     .menu-nav::-webkit-scrollbar{
         display: none;
     }
-    .menu-nav button{
+    .menu-nav a{
         flex: 0 0 auto;
         min-height: 44px;
         padding: .45rem .5rem;
     }
     .menu-layout{
-        padding: 2rem 1rem 3rem;
+        padding: 3rem 1.5rem 4rem;
     }
     .food-card{
         min-height: 0;
         gap: 1rem;
-        margin-bottom: 1.75rem;
+        margin-bottom: 2.25rem;
         padding: 0;
         scroll-margin-top: 5.25rem;
     }
@@ -351,7 +356,7 @@
     }
     .cart{
         border-left: 0;
-        border-top: 3px solid var(--wood);
+        border-top: 1px solid var(--border-hairline);
         padding: 1.5rem 1rem;
     }
     .cart > a{
@@ -363,7 +368,7 @@
 }
 
 @media (max-width: 480px){
-    .menu-nav button{
+    .menu-nav a{
         text-align: center;
     }
 }

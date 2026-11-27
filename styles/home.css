@@ -28,7 +28,7 @@
 }
 
 .hero.video-fallback{
-    background:var(--charcoal) url('../assets/images/story-images/story-image-1.jpg') center / cover no-repeat;
+    background:var(--bg-canvas) url('../assets/images/story-images/story-image-1.jpg') center / cover no-repeat;
 }
 
 .hero.video-fallback video{
@@ -41,7 +41,7 @@
     position:absolute;
     inset:0;
 
-    background:linear-gradient(rgba(10,15,12,.35),rgba(10,15,12,.55));
+    background:linear-gradient(to bottom, rgba(0,0,0,0.45), transparent);
 
     z-index:-1;
 }
@@ -51,8 +51,9 @@
     top:0;
     left:0;
     right:0;
-    background:var(--forest-bg);
-    border-bottom:1px solid var(--accent-bronze);
+    width:100%;
+    background:transparent;
+    border:0;
     padding:1.25rem 4rem;
     z-index:10;
 }
@@ -66,7 +67,7 @@
 }
 
 .navbar a{
-    color:var(--sand);
+    color:#FAF8F5;
 
     text-decoration:none;
 
@@ -98,7 +99,7 @@
 
     text-align:center;
 
-    color:var(--sand);
+    color:var(--ink-inverse);
 }
 
 .hero-content h1{
@@ -120,7 +121,7 @@
 .hero-content p{
     margin-top:1.15rem;
 
-    font-family:"Inter",sans-serif;
+    font-family:"DM Sans",sans-serif;
 
     font-size:clamp(.65rem, 2vw, .72rem);
 
@@ -135,7 +136,7 @@
 
 @media (max-width: 768px){
     .header{
-        top:1.75rem;
+        top:0;
         left:0;
         right:0;
         padding:0 1rem;

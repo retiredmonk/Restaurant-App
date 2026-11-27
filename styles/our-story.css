@@ -14,8 +14,8 @@ main > section{
 }
 
 main > section:not(.family-message):nth-of-type(even){
-    background: var(--forest-bg);
-    color: var(--sand-bg);
+    background: var(--bg-canvas);
+    color: var(--ink-primary);
 }
 
 main > section:not(.family-message):nth-of-type(even) .story-media{
@@ -23,33 +23,33 @@ main > section:not(.family-message):nth-of-type(even) .story-media{
 }
 
 main > section:not(.family-message):nth-of-type(odd){
-    background: var(--sand-bg);
-    color: var(--forest-bg);
+    background: var(--bg-canvas);
+    color: var(--ink-primary);
 }
 
 main > section:not(.family-message):nth-of-type(even) .story-text .section-heading h2,
 main > section:not(.family-message):nth-of-type(even) .story-text .section-content p,
 main > section:not(.family-message):nth-of-type(even) .story-text .section-heading p{
-    color: var(--sand-bg);
+    color: var(--ink-primary);
 }
 
 
 .story-text .section-heading p{
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: .78rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .22rem;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--ink-muted);
     margin-bottom: 1rem;
 }
 
 .story-text .section-heading h2{
-    font-family: "Fraunces", serif;
-    font-weight: 340;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
     font-size: 2.75rem;
     line-height: 1.15;
-    color: var(--charcoal);
+    color: var(--ink-primary);
     margin-bottom: 2rem;
 }
 
@@ -61,7 +61,7 @@ main > section:not(.family-message):nth-of-type(even) .story-text .section-headi
     font-family: "Cormorant Garamond", serif;
     font-size: 1.15rem;
     line-height: 1.9;
-    color: var(--ink);
+    color: var(--ink-primary);
     margin-bottom: 1.35rem;
 }
 
@@ -99,7 +99,7 @@ main > section:not(.family-message):nth-of-type(even) .story-text .section-headi
     padding: 6rem 4rem;
     box-sizing: border-box;
     background:
-        linear-gradient(180deg, rgba(10,15,12,.78) 0%, rgba(10,15,12,.62) 45%, rgba(10,15,12,.86) 100%),
+        linear-gradient(180deg, var(--hero-overlay-end), var(--hero-overlay-start)),
         url("../assets/images/story-images/story-image-1.jpg") center / cover no-repeat;
     text-align: center;
 }
@@ -115,29 +115,29 @@ main > section:not(.family-message):nth-of-type(even) .story-text .section-headi
     font-style: italic;
     font-size: 1.9rem;
     line-height: 1.6;
-    color: var(--paper);
+    color: var(--ink-inverse);
     margin-bottom: 2rem;
 }
 
 .family-message blockquote::before{
     content: "\201C";
     display: block;
-    font-family: "Fraunces", serif;
+    font-family: "Cormorant Garamond", serif;
     font-style: normal;
     font-size: 6rem;
     line-height: 1;
-    color: var(--gold);
+    color: var(--ink-inverse);
     opacity: .55;
     margin-bottom: .5rem;
 }
 
 .family-message h3{
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: .8rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .2rem;
     text-transform: uppercase;
-    color: var(--accent-bronze);
+    color: var(--ink-inverse);
 }
 
 

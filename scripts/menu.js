@@ -1,42 +1,31 @@
 const menuData = {
-    appetizers: [
+    "small-plates": [
         { id: "agedashi-tofu", name: "Agedashi Tofu", description: "Silken tofu crisped to order in kombu dashi with daikon and scallion.", price: 980 },
-        { id: "smoked-edamame", name: "Smoked Edamame", description: "Warm young soybeans finished with sea salt and fragrant yuzu kosho.", price: 680 },
-        { id: "wagyu-tataki", name: "Wagyu Tataki", description: "Lightly seared A5 wagyu with ponzu, shiso, and crisp myoga.", price: 1880 },
-        { id: "chawanmushi", name: "Chawanmushi", description: "Steamed egg custard with shiitake, prawn, mitsuba, and clear dashi.", price: 1280 }
+        { id: "smoked-edamame", name: "Smoked Edamame", description: "Warm young soybeans finished with smoked sea salt and yuzu kosho.", price: 680 },
+        { id: "hamachi-crudo", name: "Hamachi Crudo", description: "Thin-cut yellowtail with shiso oil, ponzu, daikon, and fresh wasabi.", price: 1680 }
     ],
-    "soups-salads": [
-        { id: "aka-miso-soup", name: "Aka Miso Soup", description: "Dark red miso and Hokkaido clams in a fragrant kombu broth.", price: 780 },
-        { id: "dobin-mushi", name: "Dobin Mushi", description: "Matsutake mushroom, prawn, and yuzu steamed in a small teapot.", price: 1180 },
-        { id: "seaweed-yuzu-salad", name: "Seaweed & Yuzu Salad", description: "Assorted wakame and seaweed with cucumber and bright yuzu dressing.", price: 980 },
-        { id: "sesame-spinach-ohitashi", name: "Sesame Spinach Ohitashi", description: "Blanched spinach in dashi with toasted sesame and a touch of soy.", price: 880 }
-    ],
-    "sushi-sashimi": [
+    sashimi: [
         { id: "otoro-nigiri", name: "Otoro Nigiri", description: "Fatty bluefin tuna atop red-vinegar rice with aged nikiri soy.", price: 1980 },
-        { id: "hokkaido-scallop-crudo", name: "Hokkaido Scallop Crudo", description: "Scallop sashimi with yuzu, sea salt, shiso oil, and fresh wasabi.", price: 1680 },
-        { id: "seasonal-sashimi-moriawase", name: "Seasonal Sashimi Moriawase", description: "Chef's selection of six seasonal cuts with freshly grated wasabi.", price: 3980 },
-        { id: "unagi-hand-roll", name: "Unagi Hand Roll", description: "Charcoal-grilled eel, cucumber, kaiware, and kabayaki glaze.", price: 1480 }
+        { id: "hokkaido-uni", name: "Hokkaido Uni", description: "Sweet Hokkaido sea urchin, warm shari, nori, and a whisper of ponzu.", price: 2280 },
+        { id: "seasonal-sashimi-selection", name: "Seasonal Sashimi Selection", description: "Chef's selection of three pristine seasonal cuts with freshly grated wasabi.", price: 3980 }
     ],
-    noodles: [
-        { id: "handmade-zaru-soba", name: "Handmade Zaru Soba", description: "Chilled buckwheat soba with nori and aged soy dipping sauce.", price: 1280 },
-        { id: "duck-nanban-soba", name: "Duck Nanban Soba", description: "Hand-cut soba in warm dashi with roasted duck, leek, and sansho.", price: 1680 },
-        { id: "yuzu-shio-ramen", name: "Yuzu Shio Ramen", description: "Clear chicken broth, chashu, ajitama, bamboo shoots, and yuzu.", price: 1480 },
-        { id: "kitsune-udon", name: "Kitsune Udon", description: "Thick Sanuki udon with sweet fried tofu, scallion, and kombu broth.", price: 1380 }
+    "signature-rolls": [
+        { id: "spicy-bluefin-tuna-roll", name: "Spicy Bluefin Tuna Roll", description: "Bluefin tuna, cucumber, kizami shiso, and sesame-yuzu spice.", price: 1680 },
+        { id: "crispy-soft-shell-crab-roll", name: "Crispy Soft-Shell Crab Roll", description: "Soft-shell crab, avocado, cucumber, kabayaki, and pickled daikon.", price: 1880 },
+        { id: "truffle-avocado-roll", name: "Truffle Avocado Roll", description: "Agedashi tofu, avocado, cucumber, truffle, and smoked soy.", price: 1480 }
     ],
-    "rice-bowls": [
-        { id: "unadon", name: "Unadon", description: "Chargrilled freshwater eel glazed with kabayaki over steamed rice.", price: 2980 },
-        { id: "bara-chirashi", name: "Bara Chirashi", description: "Diced seasonal sashimi, tamago, cucumber, shiso, and ikura.", price: 2480 },
-        { id: "a5-wagyu-donburi", name: "A5 Wagyu Donburi", description: "Miyazaki A5 wagyu, sweet onion, onsen egg, and sansho over rice.", price: 3680 },
-        { id: "salmon-ikura-don", name: "Salmon Ikura Don", description: "Sliced salmon and ikura with shiso, cucumber, and seasoned rice.", price: 2180 }
+    mains: [
+        { id: "miso-black-cod", name: "Miso Black Cod", description: "Saikyo-miso cured cod, charred scallion, ginger, and yuzu jus.", price: 3480 },
+        { id: "a5-wagyu-striploin", name: "A5 Wagyu Striploin", description: "Miyazaki A5 striploin, smoked bone jus, and fresh wasabi.", price: 4880 },
+        { id: "dashi-duck-breast", name: "Dashi Duck Breast", description: "Slow-roasted duck, kombu jus, sansho, and pickled Japanese plum.", price: 3280 }
     ]
 };
 
 const categoryNames = {
-    appetizers: "Appetizers",
-    "soups-salads": "Soups & Salads",
-    "sushi-sashimi": "Sushi & Sashimi",
-    noodles: "Noodles",
-    "rice-bowls": "Rice Bowls"
+    "small-plates": "Small Plates",
+    sashimi: "Sashimi",
+    "signature-rolls": "Signature Rolls",
+    mains: "Mains"
 };
 
 const storageKey = "matsumoto_cart";
@@ -116,7 +105,7 @@ function renderMenu() {
             button.className = "add-to-cart";
             button.dataset.id = dish.id;
             button.setAttribute("aria-label", `Add ${dish.name} to cart`);
-            button.textContent = "Add";
+            button.textContent = "+ Add";
 
             aside.append(price, button);
             card.append(copy, aside);
@@ -187,35 +176,17 @@ function renderCart() {
 }
 
 function setCategory(categoryId) {
-    const tabs = [...document.querySelectorAll(".menu-nav [role='tab']")];
-    const panels = [...document.querySelectorAll(".menu-categories [role='tabpanel']")];
-
-    tabs.forEach((tab) => {
-        const selected = tab.id === `tab-${categoryId}`;
-        tab.classList.toggle("active", selected);
-        tab.setAttribute("aria-selected", String(selected));
-        tab.setAttribute("tabindex", selected ? "0" : "-1");
-    });
-
-    panels.forEach((panel) => {
-        const visible = categoryId === "all" || panel.id === categoryId;
-        panel.hidden = !visible;
-        panel.classList.toggle("active", visible);
+    document.querySelectorAll(".menu-nav a").forEach((link) => {
+        const selected = link.getAttribute("href") === `#${categoryId}`;
+        link.classList.toggle("active", selected);
+        if (selected) link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
     });
 }
 
 function scrollToCategory(categoryId) {
-    let target = null;
-
-    if (categoryId === "all") {
-        target = document.querySelector("#appetizers .food-card");
-    } else {
-        const panel = document.getElementById(categoryId);
-        target = panel ? panel.querySelector(".food-card") : null;
-    }
-
+    const target = document.getElementById(categoryId);
     if (!target) return;
-
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     target.scrollIntoView({
         behavior: reduceMotion ? "auto" : "smooth",
@@ -232,57 +203,42 @@ function activateCategory(categoryId, shouldScroll = true) {
 }
 
 function initializeTabs() {
-    const tabs = [...document.querySelectorAll(".menu-nav [role='tab']")];
-
-    tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-            const categoryId = tab.id.replace("tab-", "");
-            activateCategory(categoryId);
-        });
-
-        tab.addEventListener("keydown", (event) => {
-            if (!["ArrowRight", "ArrowLeft", "ArrowHome", "ArrowEnd"].includes(event.key)) return;
-
-            event.preventDefault();
-            const currentIndex = tabs.indexOf(tab);
-            let nextIndex = currentIndex;
-
-            if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % tabs.length;
-            if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-            if (event.key === "ArrowHome") nextIndex = 0;
-            if (event.key === "ArrowEnd") nextIndex = tabs.length - 1;
-
-            tabs[nextIndex].focus();
-            tabs[nextIndex].click();
-        });
-    });
+    return;
 }
 
 function initializeCategoryLinks() {
-    document.querySelectorAll('[href="#appetizers"], [href="#soups-salads"], [href="#sushi-sashimi"], [href="#noodles"], [href="#rice-bowls"]').forEach((link) => {
+    document.querySelectorAll(".menu-nav a").forEach((link) => {
         link.addEventListener("click", (event) => {
             const categoryId = link.hash.slice(1);
             if (!document.getElementById(categoryId)) return;
 
             event.preventDefault();
-            activateCategory(categoryId);
+            scrollToCategory(categoryId);
             window.history.replaceState(null, "", `#${categoryId}`);
         });
     });
 
     const categoryId = window.location.hash.slice(1);
     if (Object.prototype.hasOwnProperty.call(categoryNames, categoryId)) {
-        activateCategory(categoryId);
-    } else {
-        setCategory("all");
+        setCategory(categoryId);
+        window.requestAnimationFrame(() => scrollToCategory(categoryId));
     }
 
     window.addEventListener("hashchange", () => {
         const nextCategory = window.location.hash.slice(1);
         if (Object.prototype.hasOwnProperty.call(categoryNames, nextCategory)) {
-            activateCategory(nextCategory);
+            setCategory(nextCategory);
         }
     });
+
+    const sections = [...document.querySelectorAll(".menu-categories > section")];
+    const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setCategory(visible.target.id);
+    }, { rootMargin: "-20% 0px -55% 0px", threshold: [0.05, 0.25, 0.5] });
+    sections.forEach((section) => observer.observe(section));
 }
 
 function initializeCart() {
@@ -345,7 +301,7 @@ function initializeCart() {
         window.clearTimeout(buttonTimers.get(button));
         button.textContent = "Added ✓";
         const buttonTimer = window.setTimeout(() => {
-            button.textContent = "Add";
+            button.textContent = "+ Add";
             buttonTimers.delete(button);
         }, 1100);
         buttonTimers.set(button, buttonTimer);
